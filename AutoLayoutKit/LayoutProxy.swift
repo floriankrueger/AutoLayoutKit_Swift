@@ -70,6 +70,19 @@ extension AutoLayoutKit {
       return self.make(self.view, attribute: attribute, relation: .Equal, relatedItem: relatedItem, relatedItemAttribute: relatedAttribute, multiplier: multiplier, constant: constant, target: targetView, priority: self.priority)
     }
     
+    // MARK: DSL (convenience)
+    
+    public func alignAllEdges(to relatedItem: UIView) -> [(constraint: NSLayoutConstraint?, targetItem: UIView?)] {
+      var result: [(constraint: NSLayoutConstraint?, targetItem: UIView?)] = []
+      
+      result.append(self.make(.Left,    equalTo: relatedItem, s: .Left))
+      result.append(self.make(.Top,     equalTo: relatedItem, s: .Top))
+      result.append(self.make(.Right,   equalTo: relatedItem, s: .Right))
+      result.append(self.make(.Bottom,  equalTo: relatedItem, s: .Bottom))
+      
+      return result
+    }
+    
     // MARK: Core
     
     private func set(item: UIView, attribute: NSLayoutAttribute, constant: Float, priority: UILayoutPriority) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
