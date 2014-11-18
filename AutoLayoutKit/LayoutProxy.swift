@@ -36,37 +36,37 @@ extension AutoLayoutKit {
     init(view: UIView) {
       self.view = view
       self.view.setTranslatesAutoresizingMaskIntoConstraints(false)
-      self.priority = UILayoutPriorityRequired
+      self.priority = 1000
       super.init()
     }
     
     // MARK: Priority
     
-    func setPriorityRequired() {
-      self.priority = UILayoutPriorityRequired
+    public func setPriorityRequired() {
+      self.priority = 1000
     }
     
-    func setPriorityDefaultHigh() {
-      self.priority = UILayoutPriorityDefaultHigh
+    public func setPriorityDefaultHigh() {
+      self.priority = 750
     }
     
-    func setPriorityDefaultLow() {
-      self.priority = UILayoutPriorityDefaultLow
+    public func setPriorityDefaultLow() {
+      self.priority = 250
     }
     
-    func setPriorityFittingSizeLevel() {
-      self.priority = UILayoutPriorityFittingSizeLevel
+    public func setPriorityFittingSizeLevel() {
+      self.priority = 50
     }
     
     // MARK: DSL (set)
     
-    func set(attribute: NSLayoutAttribute, to constant: Float) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
+    public func set(attribute: NSLayoutAttribute, to constant: Float) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
       return self.set(self.view, attribute: attribute, constant: constant, priority: self.priority)
     }
     
     // MARK: DSL (make)
     
-    func make(attribute: NSLayoutAttribute, equalTo relatedItem: AnyObject, s relatedAttribute: NSLayoutAttribute, times multiplier: Float = 1.0, plus constant: Float = 0.0, on targetView: UIView?) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
+    public func make(attribute: NSLayoutAttribute, equalTo relatedItem: AnyObject, s relatedAttribute: NSLayoutAttribute, times multiplier: Float = 1.0, plus constant: Float = 0.0, on targetView: UIView? = nil) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
       return self.make(self.view, attribute: attribute, relation: .Equal, relatedItem: relatedItem, relatedItemAttribute: relatedAttribute, multiplier: multiplier, constant: constant, target: targetView, priority: self.priority)
     }
     

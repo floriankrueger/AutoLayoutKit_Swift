@@ -28,34 +28,33 @@ import UIKit
 
 public struct AutoLayoutKit {
   
-  static func layout(view: UIView, block: (LayoutProxy) -> ()) -> AutoLayoutKit.LayoutProxy {
+  public static func layout(view: UIView, block: (LayoutProxy) -> ()) -> AutoLayoutKit.LayoutProxy {
     let layoutProxy = LayoutProxy(view: view)
     block(layoutProxy)
     return layoutProxy
   }
   
   static func findCommonSuperview(a: UIView, b: UIView?) -> UIView? {
-    var superview: UIView? = a
     
     if let b = b {
       
       // Quick-check the most likely possibilities
       let (aSuper, bSuper) = (a.superview, b.superview)
-      if a == bSuper { superview = a }
-      if b == aSuper { superview = b }
-      if aSuper == bSuper { superview = aSuper }
+      if a == bSuper { return a }
+      if b == aSuper { return b }
+      if aSuper == bSuper { return aSuper }
       
       // None of those; run the general algorithm
       var ancestorsOfA = NSSet(array: Array(ancestors(a)))
       for ancestor in ancestors(b) {
         if ancestorsOfA.containsObject(ancestor) {
-          superview = ancestor
+          return ancestor
         }
       }
-      superview = nil // No ancestors in common
+      return nil // No ancestors in common
     }
     
-    return superview // b is nil
+    return a // b is nil
   }
 
   static func ancestors(v: UIView) -> SequenceOf<UIView> {
