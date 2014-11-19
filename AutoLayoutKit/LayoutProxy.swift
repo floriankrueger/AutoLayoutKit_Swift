@@ -88,6 +88,13 @@ extension AutoLayoutKit {
       return result
     }
     
+    public func setSize(size: CGSize) -> [(constraint: NSLayoutConstraint?, targetItem: UIView?)] {
+      var result: [(constraint: NSLayoutConstraint?, targetItem: UIView?)] = []
+      result.append(self.set(.Height, to: Float(size.height)))
+      result.append(self.set(.Width, to: Float(size.width)))
+      return result
+    }
+    
     // MARK: Core
     
     private func set(item: UIView, attribute: NSLayoutAttribute, constant: Float, priority: UILayoutPriority) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
