@@ -74,12 +74,17 @@ extension AutoLayoutKit {
     
     public func alignAllEdges(to relatedItem: UIView) -> [(constraint: NSLayoutConstraint?, targetItem: UIView?)] {
       var result: [(constraint: NSLayoutConstraint?, targetItem: UIView?)] = []
-      
       result.append(self.make(.Left,    equalTo: relatedItem, s: .Left))
       result.append(self.make(.Top,     equalTo: relatedItem, s: .Top))
       result.append(self.make(.Right,   equalTo: relatedItem, s: .Right))
       result.append(self.make(.Bottom,  equalTo: relatedItem, s: .Bottom))
-      
+      return result
+    }
+    
+    public func centerIn(view: UIView) -> [(constraint: NSLayoutConstraint?, targetItem: UIView?)] {
+      var result: [(constraint: NSLayoutConstraint?, targetItem: UIView?)] = []
+      result.append(self.make(.CenterX, equalTo: view, s: .CenterX))
+      result.append(self.make(.CenterY, equalTo: view, s: .CenterY))
       return result
     }
     
