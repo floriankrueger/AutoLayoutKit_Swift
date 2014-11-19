@@ -98,7 +98,7 @@ extension AutoLayoutKit {
     // MARK: Core
     
     private func set(item: UIView, attribute: NSLayoutAttribute, constant: Float, priority: UILayoutPriority) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
-      return self.createLayoutConstraint(item, attribute: attribute, relation: .Equal, relatedItem: nil, relatedItemAttribute: .NotAnAttribute, multiplier: 1.0, constant: 0.0, target: item, priority: priority)
+      return self.createLayoutConstraint(item, attribute: attribute, relation: .Equal, relatedItem: nil, relatedItemAttribute: .NotAnAttribute, multiplier: 1.0, constant: constant, target: item, priority: priority)
     }
     
     private func make(item: UIView, attribute: NSLayoutAttribute, relation: NSLayoutRelation, relatedItem: AnyObject, relatedItemAttribute: NSLayoutAttribute, multiplier: Float, constant: Float, target: UIView?, priority: UILayoutPriority) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
