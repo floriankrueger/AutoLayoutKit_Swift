@@ -67,5 +67,11 @@ public struct AutoLayoutKit {
       }
     }
   }
+  
+  struct Util {
+    static func isRetina() -> Bool {
+      return UIScreen.mainScreen().scale > 1.0
+    }
+  }
 
 }

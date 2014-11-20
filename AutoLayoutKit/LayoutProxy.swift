@@ -95,6 +95,22 @@ extension AutoLayoutKit {
       return result
     }
     
+    public func makeVerticalHairline() -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
+      if AutoLayoutKit.Util.isRetina() {
+        return self.set(.Width, to: 0.5)
+      } else {
+        return self.set(.Width, to: 1.0)
+      }
+    }
+    
+    public func makeHorizontalHairline() -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
+      if AutoLayoutKit.Util.isRetina() {
+        return self.set(.Height, to: 0.5)
+      } else {
+        return self.set(.Height, to: 1.0)
+      }
+    }
+    
     // MARK: Core
     
     private func set(item: UIView, attribute: NSLayoutAttribute, constant: Float, priority: UILayoutPriority) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
