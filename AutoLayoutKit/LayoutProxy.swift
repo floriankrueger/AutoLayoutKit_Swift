@@ -66,8 +66,8 @@ extension AutoLayoutKit {
     
     // MARK: DSL (make)
     
-    public func make(attribute: NSLayoutAttribute, equalTo relatedItem: AnyObject, s relatedAttribute: NSLayoutAttribute, times multiplier: Float = 1.0, plus constant: Float = 0.0, on targetView: UIView? = nil) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
-      return self.make(self.view, attribute: attribute, relation: .Equal, relatedItem: relatedItem, relatedItemAttribute: relatedAttribute, multiplier: multiplier, constant: constant, target: targetView, priority: self.priority)
+    public func make(attribute: NSLayoutAttribute, equalTo relatedItem: AnyObject, s relatedAttribute: NSLayoutAttribute, times multiplier: Float = 1.0, plus constant: Float = 0.0, minus negativeConstant: Float = 0.0, on targetView: UIView? = nil) -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
+      return self.make(self.view, attribute: attribute, relation: .Equal, relatedItem: relatedItem, relatedItemAttribute: relatedAttribute, multiplier: multiplier, constant: constant - negativeConstant, target: targetView, priority: self.priority)
     }
     
     // MARK: DSL (convenience)
