@@ -1,6 +1,6 @@
 //
 //  LayoutProxy.swift
-//  AutoLayoutKit
+//  Manuscript
 //
 //  Created by Florian Krüger on 17/11/14.
 //  Copyright (c) 2014 projectserver.org. All rights reserved.
@@ -26,7 +26,7 @@
 import Foundation
 import UIKit
 
-extension AutoLayoutKit {
+extension Manuscript {
   
   public class LayoutProxy: NSObject {
     
@@ -96,7 +96,7 @@ extension AutoLayoutKit {
     }
     
     public func makeVerticalHairline() -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
-      if AutoLayoutKit.Util.isRetina() {
+      if Manuscript.Util.isRetina() {
         return self.set(.Width, to: 0.5)
       } else {
         return self.set(.Width, to: 1.0)
@@ -104,7 +104,7 @@ extension AutoLayoutKit {
     }
     
     public func makeHorizontalHairline() -> (constraint: NSLayoutConstraint?, targetItem: UIView?) {
-      if AutoLayoutKit.Util.isRetina() {
+      if Manuscript.Util.isRetina() {
         return self.set(.Height, to: 0.5)
       } else {
         return self.set(.Height, to: 1.0)
@@ -143,7 +143,7 @@ extension AutoLayoutKit {
         relatedView = aRelatedView
       }
       
-      let possibleTarget = AutoLayoutKit.findCommonSuperview(item, b: relatedView)
+      let possibleTarget = Manuscript.findCommonSuperview(item, b: relatedView)
       if let target = possibleTarget {
         return self.installConstraint(constraint, onTarget: target)
       } else {

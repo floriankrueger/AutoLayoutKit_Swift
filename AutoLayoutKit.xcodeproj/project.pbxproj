@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		CF6C87731A1BF0C100F10557 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6C87721A1BF0C100F10557 /* Foundation.framework */; };
 		CFAD38891A1B6740000F3F31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAD38881A1B6740000F3F31 /* UIKit.framework */; };
-		CFE975C61A1A1D130027CC5B /* AutoLayoutKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CFE975C51A1A1D130027CC5B /* AutoLayoutKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE975C61A1A1D130027CC5B /* Manuscript.h in Headers */ = {isa = PBXBuildFile; fileRef = CFE975C51A1A1D130027CC5B /* Manuscript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFE975CC1A1A1D130027CC5B /* AutoLayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE975C01A1A1D130027CC5B /* AutoLayoutKit.framework */; };
 		CFE975D31A1A1D130027CC5B /* AutoLayoutKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE975D21A1A1D130027CC5B /* AutoLayoutKitTests.swift */; };
-		CFE975DD1A1A1D7A0027CC5B /* AutoLayoutKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE975DC1A1A1D7A0027CC5B /* AutoLayoutKit.swift */; };
+		CFE975DD1A1A1D7A0027CC5B /* Manuscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE975DC1A1A1D7A0027CC5B /* Manuscript.swift */; };
 		CFE975DF1A1A1E490027CC5B /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE975DE1A1A1E490027CC5B /* LayoutProxy.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,11 +31,11 @@
 		CFAD38881A1B6740000F3F31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CFE975C01A1A1D130027CC5B /* AutoLayoutKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoLayoutKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE975C41A1A1D130027CC5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFE975C51A1A1D130027CC5B /* AutoLayoutKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutKit.h; sourceTree = "<group>"; };
+		CFE975C51A1A1D130027CC5B /* Manuscript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manuscript.h; sourceTree = "<group>"; };
 		CFE975CB1A1A1D130027CC5B /* AutoLayoutKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE975D11A1A1D130027CC5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFE975D21A1A1D130027CC5B /* AutoLayoutKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutKitTests.swift; sourceTree = "<group>"; };
-		CFE975DC1A1A1D7A0027CC5B /* AutoLayoutKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutKit.swift; sourceTree = "<group>"; };
+		CFE975DC1A1A1D7A0027CC5B /* Manuscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manuscript.swift; sourceTree = "<group>"; };
 		CFE975DE1A1A1E490027CC5B /* LayoutProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +65,7 @@
 			children = (
 				CF6C87721A1BF0C100F10557 /* Foundation.framework */,
 				CFAD38881A1B6740000F3F31 /* UIKit.framework */,
-				CFE975C21A1A1D130027CC5B /* AutoLayoutKit */,
+				CFE975C21A1A1D130027CC5B /* Manuscript */,
 				CFE975CF1A1A1D130027CC5B /* AutoLayoutKitTests */,
 				CFE975C11A1A1D130027CC5B /* Products */,
 			);
@@ -80,14 +80,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CFE975C21A1A1D130027CC5B /* AutoLayoutKit */ = {
+		CFE975C21A1A1D130027CC5B /* Manuscript */ = {
 			isa = PBXGroup;
 			children = (
-				CFE975C51A1A1D130027CC5B /* AutoLayoutKit.h */,
-				CFE975DC1A1A1D7A0027CC5B /* AutoLayoutKit.swift */,
+				CFE975C51A1A1D130027CC5B /* Manuscript.h */,
+				CFE975DC1A1A1D7A0027CC5B /* Manuscript.swift */,
 				CFE975DE1A1A1E490027CC5B /* LayoutProxy.swift */,
 				CFE975C31A1A1D130027CC5B /* Supporting Files */,
 			);
+			name = Manuscript;
 			path = AutoLayoutKit;
 			sourceTree = "<group>";
 		};
@@ -123,7 +124,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFE975C61A1A1D130027CC5B /* AutoLayoutKit.h in Headers */,
+				CFE975C61A1A1D130027CC5B /* Manuscript.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE975DF1A1A1E490027CC5B /* LayoutProxy.swift in Sources */,
-				CFE975DD1A1A1D7A0027CC5B /* AutoLayoutKit.swift in Sources */,
+				CFE975DD1A1A1D7A0027CC5B /* Manuscript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

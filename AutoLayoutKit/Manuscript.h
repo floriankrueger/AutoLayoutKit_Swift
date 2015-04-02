@@ -1,6 +1,6 @@
 //
-//  AutoLayoutKit.h
-//  AutoLayoutKit
+//  Manuscript.h
+//  Manuscript
 //
 //  Created by Florian Krüger on 17/11/14.
 //  Copyright (c) 2014 projectserver.org. All rights reserved.
@@ -25,12 +25,12 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for AutoLayoutKit.
-FOUNDATION_EXPORT double AutoLayoutKitVersionNumber;
+//! Project version number for Manuscript.
+FOUNDATION_EXPORT double ManuscriptVersionNumber;
 
-//! Project version string for AutoLayoutKit.
-FOUNDATION_EXPORT const unsigned char AutoLayoutKitVersionString[];
+//! Project version string for Manuscript.
+FOUNDATION_EXPORT const unsigned char ManuscriptVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <AutoLayoutKit/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <Manuscript/PublicHeader.h>
 
 

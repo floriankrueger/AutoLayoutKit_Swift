@@ -1,6 +1,6 @@
 //
-//  AutoLayoutKit.swift
-//  AutoLayoutKit
+//  Manuscript.swift
+//  Manuscript
 //
 //  Created by Florian Krüger on 17/11/14.
 //  Copyright (c) 2014 projectserver.org. All rights reserved.
@@ -26,9 +26,9 @@
 import Foundation
 import UIKit
 
-public struct AutoLayoutKit {
+public struct Manuscript {
   
-  public static func layout(view: UIView, block: (LayoutProxy) -> ()) -> AutoLayoutKit.LayoutProxy {
+  public static func layout(view: UIView, block: (LayoutProxy) -> ()) -> Manuscript.LayoutProxy {
     let layoutProxy = LayoutProxy(view: view)
     block(layoutProxy)
     return layoutProxy
