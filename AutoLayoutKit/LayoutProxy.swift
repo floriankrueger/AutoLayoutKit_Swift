@@ -138,7 +138,12 @@ extension AutoLayoutKit {
         return self.installConstraint(constraint, onTarget: target)
       }
       
-      let possibleTarget = AutoLayoutKit.findCommonSuperview(item, b: relatedItem as UIView?)
+      var relatedView: UIView? = nil
+      if let aRelatedView = relatedItem as? UIView {
+        relatedView = aRelatedView
+      }
+      
+      let possibleTarget = AutoLayoutKit.findCommonSuperview(item, b: relatedView)
       if let target = possibleTarget {
         return self.installConstraint(constraint, onTarget: target)
       } else {
